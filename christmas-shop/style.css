@@ -10,6 +10,10 @@ body {
 .wrapper {
     width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
+    background-color: rgba(255, 70, 70, 1);
+    border-radius: 20px;
+    margin-top: -1px;
 }
 
 header {
@@ -80,10 +84,10 @@ h1 {
 
 .hero {
     width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
     height: 524px;
-    background-color:  rgba(255, 70, 70, 1);
+    /* background-color:  rgba(255, 70, 70, 1); */
     background-image: url('./assets/images/christmas-ball.png'),
             url('./assets/images/snow.png');
     background-size: cover;
@@ -140,7 +144,7 @@ button.explore {
     padding: 20px 32px;
     background:  #181C29;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 11.9px;
     font-weight: 600;
     line-height: 15.6px;
     letter-spacing: 0.05em;
@@ -149,6 +153,390 @@ button.explore {
     text-decoration-skip-ink: none;
     color:  #FFFFFF;
 }
+
+
+.about {
+    width: 100%;
+    height: 648px;
+    /* background-color: rgba(255, 70, 70, 1); */
+    background-image: url('./assets/images/about-snow.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    width: 1276px;
+    height: 528px;
+    border-radius: 20px;
+    background-color:  #FFFFFF;
+    display: flex;
+}
+
+.text-about {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-content {
+    width: 426px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.text-content .caption {
+    width: 100%;
+    color: #FF4646;
+    text-align: start;
+}
+
+.heading {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#181C29;
+    margin: 0;
+}
+
+.subheading {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+    margin: 0;
+}
+
+.about-content img {
+    border-radius: 20px;
+}
+
+.slider {
+    width: 100%;
+    height: 488px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(255, 70, 70, 1); */
+    background-image: url('./assets/images/about-snow.png');
+}
+
+.slider-content {
+    width: 1276px;
+    height: 368px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-header {
+    width: 426 px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.section-header .heading {
+    color:#FFFFFF;
+    text-align: center;
+}
+
+.slider-wrapper {
+    width: 1276px;
+    height: 200px;
+}
+
+.slider-row {
+    width: 1993px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-text {
+    font-family: Montserrat;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 97.52px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+}
+
+.slider-row img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.slider-buttons-wrapper {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.arrow {
+    width: 56px;
+    height: 56px;
+    appearance: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    padding: 6px;
+    background-color: transparent;
+}
+
+.arrow:disabled {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.best-gifts {
+    width: 100%;
+    height: 554px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 70, 70, 1); */
+    background-image: url('./assets/images/about-snow.png');
+}
+
+.best-gifts-content {
+    width: 1276px;
+    height: 434px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cards-container {
+    width: 100%;
+    height: 342px;
+    display: flex;
+    gap: 12px;
+}
+
+.card {
+    width: 310px;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(236, 243, 248, 1);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+}
+
+.text-container {
+    height: 112px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0px 0px 20px;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.text-container h4:nth-child(1) {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin: 0;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+h4.for-work {
+    color: #4361FF;
+}
+
+h4.for-health {
+    color: #06A44F;
+}
+
+h4.for-harmony {
+    color:  #FF43F7;
+}
+
+.cta {
+    width: 100%;
+    height: 668px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 70, 70, 1); */
+    background-image: url('./assets/images/about-snow.png'), url('./assets/images/bg-forest.png');
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+        
+}
+
+.cta-content {
+    width: 1276px;
+    height: 548px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cta-container {
+    width: 426px;
+    height: 428px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-container .heading {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.timer {
+    width: 344px;
+    height: 72px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown {
+    width: 100%;
+    height: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.time {
+    width: 80px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 20px;
+    background:  rgba(255, 255, 255, 0.4);
+}
+
+.time p:nth-child(2) {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    height: 496px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 1276px;
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.contacts {
+    width: 100%;
+    height: 204px;
+    display: flex;
+    gap: 12px;
+}
+
+.contact {
+    width: 417.33px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 20px;
+    background-color: #ECF3F8;
+}
+
+.contact img {
+    width: 80px;
+    height: 80px;
+}
+
+.authors {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.socials {
+    width: 196px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.authors .caption {
+    color: #181C29;
+}
+
+
+
+
+
+
+
 
 
 @font-face {
