@@ -1,0 +1,414 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: #181C29;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgba(255, 70, 70, 1);
+    border-radius: 20px;
+    margin-top: -1px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background: #FFFFFF;
+}
+
+.header-wrapper {
+    width: 1276px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 141px;
+    height: 40px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 24px;
+    height: 24px;
+}
+
+h1 {
+    margin: 0;
+    width: 69px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+}
+
+.navigation {
+    width: 1123px;
+    height: 40px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.navigation li {
+    padding: 12px 20px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    cursor: pointer;
+    color: #181C29;
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation li:hover {
+    color: #FF4646;
+    background: rgba(255, 70, 70, 0.1);
+    border-radius: 12px;
+    transition: all 0.5s ease;
+}
+
+.navigation li:hover a {
+    color: #FF4646;
+}
+
+.navigation li.active-link {
+    color: #FF4646;
+    background: rgba(255, 70, 70, 0.1);
+    border-radius: 12px;
+    cursor: default;
+}
+
+.gifts {
+    width: 100%;
+    height: 1394px;
+    background-image: url('../assets/images/gyrland.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gifts-content {
+    width: 1276px;
+    height: 1274px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.gifts-heading {
+    width: 426px;
+    height: 144px;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.tabs {
+    width: 474px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    padding: 12px 20px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    transition: all 0.5s ease-in-out;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: default;
+}
+
+.cards-container {
+    width: 100%;
+    height: 1050px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card {
+    width: 310px;
+    height: 342px;
+    border-radius: 20px;
+    background-color: rgba(236, 243, 248, 1);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .text-container p {
+    color: #FF4646;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+}
+
+.text-container {
+    height: 90px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0px 0px 20px;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.subheading {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23.68px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+    margin: 0;
+}
+
+.text-container p {
+    letter-spacing: 0.09em;
+}
+
+.text-container h4:nth-child(1) {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin: 0;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+h4.for-work {
+    color: #4361FF;
+}
+
+h4.for-health {
+    color: #06A44F;
+}
+
+h4.for-harmony {
+    color: #FF43F7;
+}
+
+footer {
+    width: 100%;
+    height: 496px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36.48px;
+    letter-spacing: 0.16em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #181C29;
+    margin: 0;
+}
+
+.caption {
+    padding: 0;
+    margin: 0;
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+}
+
+.footer-content {
+    width: 1276px;
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.contacts {
+    width: 100%;
+    height: 204px;
+    display: flex;
+    gap: 12px;
+}
+
+.contact {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 20px;
+    background-color: #ECF3F8;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact:hover h2,
+.contact:hover p {
+    color: #FF4646;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact img {
+    width: 80px;
+    height: 80px;
+}
+
+.authors {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.socials {
+    width: 196px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.social:hover path {
+    stroke: #FF4646;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.authors .caption {
+    color: #181C29;
+    transition: all 0.5s ease-in-out;
+}
+
+.authors .caption:hover {
+    color: #FF4646;
+}
+
+.contact .subheading {
+    letter-spacing: 0.09em;
+}
+
+.contact .heading {
+    letter-spacing: 0.18em;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Allura;
+    src: url('../assets/fonts/Allura-Regular.ttf');
+    font-style: normal;
+}
