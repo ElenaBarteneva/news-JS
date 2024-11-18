@@ -3,12 +3,20 @@ html {
 }
 
 body {
-    margin: 0;
+    width: 1440px;
+    margin: 0 auto;
     padding: 0;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .wrapper {
-    width: 1440px;
+    /* width: 1440px; */
     margin: 0 auto;
     overflow: hidden;
     background-color: rgba(255, 70, 70, 1);
@@ -80,6 +88,15 @@ h1 {
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    cursor: pointer;
+    color: #181C29;
+    transition: all 0.05ms ease;
+}
+
+.navigation li:hover {
+    color: #FF4646;
+    background:  rgba(255, 70, 70, 0.1);
+    border-radius: 12px;
 }
 
 .hero {
@@ -141,6 +158,7 @@ button.explore {
     width: 235px;
     height: 56px;
     border-radius: 20px;
+    border: none;
     padding: 20px 32px;
     background:  #181C29;
     font-family: Montserrat;
@@ -152,6 +170,13 @@ button.explore {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color:  #FFFFFF;
+    transition: all 0.05s ease-in-out;
+}
+
+button.explore:hover {
+    background: #FFFFFF;
+    color: #181C29;
+
 }
 
 
@@ -178,7 +203,7 @@ button.explore {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 60px;
 }
 
 .text-content {
@@ -215,6 +240,7 @@ button.explore {
     font-weight: 400;
     line-height: 23.68px;
     text-align: left;
+    /* letter-spacing: 0.09em; */
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #181C29;
@@ -267,7 +293,7 @@ button.explore {
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .slider-text {
@@ -302,12 +328,32 @@ button.explore {
     appearance: none;
     border: 1px solid #FFFFFF;
     border-radius: 20px;
-    padding: 6px;
+    padding: 16px;
     background-color: transparent;
+    transition: all 0.05s ease-in-out;
 }
 
 .arrow:disabled {
     border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: not-allowed;
+}
+
+.arrow:disabled:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+}
+
+.arrow:hover {
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.arrow:hover svg path {
+    stroke: #FF4646;
+}
+
+.arrow:disabled:hover svg path {
+    stroke: #FFFFFF;
 }
 
 .best-gifts {
@@ -341,6 +387,13 @@ button.explore {
     height: 100%;
     border-radius: 20px;
     background-color: rgba(236, 243, 248, 1);
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+}
+
+.card:hover .text-container p {
+    color: #FF4646;
+    font-weight: 600;
 }
 
 .card img {
@@ -349,7 +402,7 @@ button.explore {
 }
 
 .text-container {
-    height: 112px;
+    height: 90px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -357,6 +410,10 @@ button.explore {
     padding: 20px 0px 0px 20px;
     gap: 8px;
     background-color: rgba(255, 255, 255, 1);
+}
+
+.text-container p {
+    letter-spacing: 0.09em;
 }
 
 .text-container h4:nth-child(1) {
@@ -414,6 +471,7 @@ h4.for-harmony {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -493,7 +551,7 @@ footer {
 }
 
 .contact {
-    width: 417.33px;
+    width: 33.33%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -502,6 +560,13 @@ footer {
     gap: 12px;
     border-radius: 20px;
     background-color: #ECF3F8;
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+}
+
+.contact:hover h2, .contact:hover p {
+    color:#FF4646;
+    font-weight: 600;
 }
 
 .contact img {
@@ -523,12 +588,40 @@ footer {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 12px;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.05s ease-in-out;
+}
+
+
+.social:hover path {
+    stroke: #FF4646;
 }
 
 .authors .caption {
     color: #181C29;
+    transition: all 1s ease-in-out;
+}
+
+.authors .caption:hover {
+    color: #FF4646;
+}
+
+.contact .subheading {
+    letter-spacing: 0.09em;
+}
+
+.contact .heading {
+    letter-spacing: 0.18em;
 }
 
 
