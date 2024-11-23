@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home-adaptive-style.css">
     <link rel="icon" type="image/SVG" href="./assets/images/snowflake.png" sizes="24x24">
+    <script defer src="./main.js"></script>
 </head>
 <body>
     <header>
@@ -15,12 +17,20 @@
              <img alt="snowflake icon" src="./assets/images/snowflake.png">
                 <h2>THE GIFTS</h2>   
             </a>
-        <ul class="navigation">
-            <li><a href="./gifts/gifts.html">GIFTS</a></li>
-            <li><a href='#about'>ABOUT</a></li>
-            <li><a href='#best'>BEST</a></li>
-            <li><a href='#contacts'>CONTACTS</a></li>
-        </ul>  
+            <nav>
+                <ul class="navigation">
+                    <li><a href="./gifts/gifts.html">GIFTS</a></li>
+                    <li><a href='#about'>ABOUT</a></li>
+                    <li><a href='#best'>BEST</a></li>
+                    <li><a href='#contacts'>CONTACTS</a></li>
+                </ul>
+                <div id="burger" class="hamburger-menu">
+                    <input id="menu-toggle" type="checkbox">
+                    <label class="menu-button" for="menu-toggle">
+                        <span></span>
+                    </label>
+                </div>
+            </nav> 
         </div>
     </div>
     </header>
@@ -43,7 +53,10 @@
                     <p class="subheading">This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.</p>
                 </div>
             </div>
-            <img alt="santa" src="./assets/images/santa.png">
+            <div class="about-img">
+                <img alt="santa" src="./assets/images/santa.png">
+            </div>
+            
         </div>
     </section>
     <section class="slider">
