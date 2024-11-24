@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIFTS</title>
     <link rel="stylesheet" href="./gifts.css">
+    <link rel="stylesheet" href="./gifts_adaptive.css">
     <link rel="icon" type="image/SVG" href="../assets/images/snowflake.png" sizes="24x24">
 </head>
 
@@ -17,12 +18,21 @@
                     <img alt="snowflake icon" src="../assets/images/snowflake.png">
                     <h2>THE GIFTS</h2>
                 </a>
-                <ul class="navigation">
+                <nav>
+                    <ul class="navigation">
                     <li class="active-link">GIFTS</li>
                     <li><a href='../index.html#about'>ABOUT</a></li>
                     <li><a href='../index.html#best'>BEST</a></li>
                     <li><a href='#contacts'>CONTACTS</a></li>
-                </ul>
+                    </ul>
+                    <div id="burger" class="hamburger-menu">
+                        <input id="menu-toggle" type="checkbox">
+                        <label class="menu-button" for="menu-toggle">
+                            <span></span>
+                        </label>
+                    </div>
+                </nav>
+                
             </div>
         </div>
     </header>
