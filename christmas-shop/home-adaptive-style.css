@@ -1,4 +1,8 @@
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1280px) {
+    /* html {
+        font-size: clamp(1vw, 1.302vw, 10px);
+    } */
+
     .header-wrapper {
         width: 75.2rem;
     }
@@ -91,6 +95,10 @@
 
 
 @media(min-width: 380px) and (width < 768px) {
+    /* html {
+            font-size: clamp(0.1vw, 2.63vw, 10px);
+        } */
+
     .header-wrapper {
             width: 36.4rem;
         }
