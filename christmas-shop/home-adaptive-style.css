@@ -1,7 +1,110 @@
-@media (min-width: 769px) and (max-width: 1439px) {
-    /* html {
-        font-size: clamp(1vw, 1.302vw, 10px);
-    } */
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .header-wrapper {
+        width: 110rem;
+    }
+    
+    .about-content {
+        width: 110rem;
+    }
+    
+    .text-content {
+        width: 40rem;
+    }
+    
+    .about-img {
+        width: 50%;
+        height: 100%;
+    }
+    
+    .navigation {
+        max-width: 50rem;
+    }
+    
+    
+    .slider-content {
+        width: 110rem;
+    }
+    
+    .slider-wrapper {
+        width: 110rem;
+    }
+    
+    .best-gifts {
+        height: 90.8rem;
+    }
+    
+    .best-gifts-content {
+        width: 110rem;
+        height: 78.8rem;
+    }
+    
+    .footer-content {
+        width: 110rem;
+    }
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .header-wrapper {
+        width: 90rem;
+    }
+
+    .about-content {
+        width: 90rem;
+    }
+
+    .text-content {
+        width: 30rem;
+    }
+
+    .about-img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .navigation {
+        max-width: 50rem;
+    }
+
+    .slider-content {
+        width: 90rem;
+    }
+
+    .slider-wrapper {
+        width: 90rem;
+    }
+
+    .best-gifts {
+        height: 90.8rem;
+    }
+
+    .best-gifts-content {
+        width: 90rem;
+        height: 78.8rem;
+    }
+
+    footer {
+        height: 92.8rem;
+    }
+
+    .footer-content {
+        width: 90rem;
+        height: 80.8rem;
+    }
+
+    .contacts {
+        height: 63.6rem;
+        flex-direction: column;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) {
 
     .header-wrapper {
         width: 75.2rem;
@@ -24,8 +127,6 @@
     .navigation {
         max-width: 50rem;
     }
-
-
 
     .slider-content {
         width: 75.2rem;
@@ -64,7 +165,7 @@
 
 }
 
-@media screen and (width = 768px) {
+@media(min-width: 760px) and (max-width: 768px) {
 
     .hamburger-menu {
         display: block;
@@ -94,78 +195,186 @@
         text-align: left;
     }
 
+    .navigation.open {
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    .header-wrapper {
+        width: 75.2rem;
+    }
+        
+    .about-content {
+        width: 75.2rem;
+    }
+        
+    .text-content {
+        width: 25.6rem;
+        height: 43.6rem;
+    }
+        
+    .about-img {
+        width: 50%;
+        height: 100%;
+    }
+        
+    .navigation {
+        max-width: 50rem;
+    } 
+        
+    .slider-content {
+        width: 75.2rem;
+    }
+        
+    .slider-wrapper {
+        width: 75.2rem;
+    }
+        
+    .best-gifts {
+        height: 90.8rem;
+    }
+        
+    .best-gifts-content {
+        width: 75.2rem;
+        height: 78.8rem;
+    }
+        
+    footer {
+        height: 92.8rem;
+    }
+        
+    .footer-content {
+        width: 75.2rem;
+        height: 80.8rem;
+    }
+        
+    .contacts {
+        height: 63.6rem;
+        flex-direction: column;
+    }
+        
+    .contact {
+        width: 100%;
+    }
+}
+
+@media(min-width: 550px) and (max-width: 759px) {
+
+    .header-wrapper {
+        width: 48rem;
+    }
+
+    .about {
+        height: 100rem;
+    }
+
+    .about-content {
+        width: 48rem;
+        height: 88rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        width: 48rem;
+        height: 40%;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .text-about {
+        width: 40rem;
+        padding: 0;
+        height: 40%;
+    }
+
+    .about-img {
+        width: 100%;
+        height: 60%;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        height: 100vh;
+        right: -111vw;
+        top: 5.1rem;
+        bottom: 0;
+        width: 100vw;
+        background-color: #FFFF;
+        z-index: 2;
+        transition: transform 0.5s ease;
+    }
+
+    .navigation li a {
+        display: block;
+        font-size: 2.4rem;
+        line-height: 152%;
+        letter-spacing: 0.16em;
+        text-align: left;
+    }
 
     .navigation.open {
         transform: translateX(-100%);
         visibility: visible;
     }
 
-                .header-wrapper {
-                    width: 75.2rem;
-                }
-        
-                .about-content {
-                    width: 75.2rem;
-                }
-        
-                .text-content {
-                    width: 25.6rem;
-                    height: 43.6rem;
-                }
-        
-                .about-img {
-                    width: 50%;
-                    height: 100%;
-                }
-        
-                .navigation {
-                    max-width: 50rem;
-                }
-        
-        
-        
-                .slider-content {
-                    width: 75.2rem;
-                }
-        
-                .slider-wrapper {
-                    width: 75.2rem;
-                }
-        
-                .best-gifts {
-                    height: 90.8rem;
-                }
-        
-                .best-gifts-content {
-                    width: 75.2rem;
-                    height: 78.8rem;
-                }
-        
-                footer {
-                    height: 92.8rem;
-                }
-        
-                .footer-content {
-                    width: 75.2rem;
-                    height: 80.8rem;
-                }
-        
-                .contacts {
-                    height: 63.6rem;
-                    flex-direction: column;
-                }
-        
-                .contact {
-                    width: 100%;
-                }
+    .slider-content {
+        width: 48rem;
+    }
+
+    .slider-wrapper {
+        width: 48rem;
+    }
+
+    .best-gifts {
+        height: 161.6rem;
+    }
+
+    .best-gifts-content {
+        width: 48rem;
+        height: 149.6rem;
+    }
+
+    .cta {
+        height: 70.4rem;
+    }
+
+    .cta-content {
+        width: 48rem;
+        height: 58.4rem;
+    }
+
+    footer {
+        height: 92.8rem;
+    }
+
+    .footer-content {
+        width: 48rem;
+        height: 80.8rem;
+    }
+
+    .contacts {
+        height: 63.6rem;
+        flex-direction: column;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
 }
     
 
-
-@media(min-width: 380px) and (width < 767px) {
-    /* html {
-            font-size: clamp(0.1vw, 2.63vw, 10px);
-        } */
+@media(min-width: 379px) and (max-width: 549px) {
 
     .header-wrapper {
             width: 36.4rem;
@@ -191,6 +400,7 @@
             height: 40%;
             align-items: center;
             justify-content: center;
+            padding: 0;
         }
 
         .text-about {
