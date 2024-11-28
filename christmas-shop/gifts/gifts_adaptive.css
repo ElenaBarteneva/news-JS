@@ -1,61 +1,44 @@
 @media (min-width: 1280px) and (max-width: 1439px) {
-.header-wrapper {
-        width: 110rem;
-    }
-
-    .navigation {
-        max-width: 50rem;
-    }
-
     .gifts {
-        height: 180rem;
+        height: 1800px;
     }
 
     .gifts-content {
-        width: 110rem;
-        height: 167rem;
+        height: 1670px;
     }
 
     .cards-container {
-        height: 140rem;
+        height: 1400px;
     }
 
 }
 
 
-@media (min-width: 1024px) and (max-width: 1279px) {
-    .header-wrapper {
-        width: 90rem;
-    }
-
-    .navigation {
-        max-width: 50rem;
-    }
+@media (min-width: 769px) and (max-width: 1279px) {
 
     .gifts {
-        height: 245.6rem;
+        height: auto;
+        padding: 5%;
     }
 
     .gifts-content {
-        width: 90rem;
-        height: 233.6rem;
+        height: auto;
     }
 
     .cards-container {
-        height: 211.2rem;
+        height: auto;
     }
 
     footer {
-        height: 92.8rem;
+        height: 928px;
     }
 
     .footer-content {
-        width: 90rem;
-        height: 80.8rem;
+        height: 808px;
     }
 
     .contacts {
-        height: 63.6rem;
+        height: 636px;
         flex-direction: column;
     }
 
@@ -107,7 +90,11 @@
     }
 }
 
-@media(min-width: 760px) and (max-width: 768px) {
+@media(min-width: 711px) and (max-width: 768px) {
+    .container {
+        width: 98%;
+    }
+
     .hamburger-menu {
         display: block;
     }
@@ -120,7 +107,7 @@
         position: fixed;
         height: 100vh;
         right: -106vw;
-        top: 5.1rem;
+        top: 510px;
         bottom: 0;
         width: 100vw;
         background-color: #FFFF;
@@ -131,7 +118,7 @@
     .navigation li a,
     .navigation li.active-link {
         display: block;
-        font-size: 2.4rem;
+        font-size: 24px;
         line-height: 152%;
         letter-spacing: 0.16em;
         text-align: left;
@@ -144,33 +131,40 @@
     }
 
     .header-wrapper {
-        width: 75.2rem;
+        width: 100%;
     }
     
     .gifts {
-        height: 245.6rem;
+        height: 2456px;
+    }
+
+    .gifts-heading {
+        width: 56.6%;
     }
     
     .gifts-content {
-        width: 75.2rem;
-        height: 233.6rem;
+        width: 98%;
+        height: 2336px;
+    }
+
+    .tabs {
+        width: 63%;
     }
     
     .cards-container {
-        height: 211.2rem;
+        height: 2112px;
     }
     
     footer {
-        height: 92.8rem;
+        height: 928px;
     }
     
     .footer-content {
-        width: 75.2rem;
-        height: 80.8rem;
+        height: 808px;
     }
     
     .contacts {
-        height: 63.6rem;
+        height: 636px;
         flex-direction: column;
     }
     
@@ -178,8 +172,8 @@
         width: 100%;
     }
 }
-
-@media(min-width: 500px) and (max-width: 759px) {
+/* 
+@media(min-width: 500px) and (max-width: 710px) {
     .hamburger-menu {
         display: block;
     }
@@ -262,10 +256,14 @@
     .contact {
         width: 100%;
     }
-}
+} */
 
 
-@media(min-width: 379px) and (max-width: 499px){
+@media(min-width: 379px) and (max-width: 710px){
+    .container {
+        width: 95.8%;
+    }
+
     .hamburger-menu {
         display: block;
     }
@@ -278,7 +276,7 @@
         position: fixed;
         height: 100vh;
         right: -111vw;
-        top: 5.1rem;
+        top: 510px;
         bottom: 0;
         width: 100vw;
         background-color: #FFFF;
@@ -288,7 +286,7 @@
     
     .navigation li a, .navigation li.active-link {
         display: block;
-        font-size: 2.4rem;
+        font-size: 24px;
         line-height: 152%;
         letter-spacing: 0.16em;
         text-align: left;
@@ -301,46 +299,46 @@
     }
 
     .header-wrapper {
-        width: 36.4rem;
+        width: 100%;
     }
     
     .gifts {
-         height: 467.6rem;
+        height: 4676px;
     }
     
     .gifts-content {
-        width: 36.4rem;
-        height: 455.6rem;
+        width: 95.8%;
+        height: 4556px;
     }
     
     .cards-container {
-        height: 423.6rem;
+        height: 4236px;
     }
 
     .gifts-heading {
-        width: 36.4rem;
-        height: 24rem;
+        width: 95.8%;
+        height: 240px;
     }
 
     .tabs {
-        width: 35.4rem;
+        width: 97.25%;
     }
 
     .tab {
-        padding: 1.2rem 0.8rem;
+        padding: 12px 8px;
     }
 
     footer {
-        height: 92.8rem;
+        height: 928px;
     }
     
     .footer-content {
-        width: 36.4rem;
-        height: 80.8rem;
+        width: 100%;
+        height: 808px;
     }
     
     .contacts {
-        height: 63.6rem;
+        height: 636px;
         flex-direction: column;
     }
     
