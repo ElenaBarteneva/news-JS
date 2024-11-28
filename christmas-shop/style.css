@@ -17,6 +17,7 @@ a, a:active {
 }
 
 .container {
+    width: 88.61%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +41,7 @@ header {
 }
 
 .header-wrapper {
-    width: 1276px;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -49,7 +50,7 @@ header {
 
 .logo {
     width: 141px;
-    height: 40px;
+    /* height: 62.5%; */
     display: flex;
     gap: 8px;
     align-items: center;
@@ -76,9 +77,13 @@ header {
     color: #181C29;
 }
 
+/* nav {
+    width: 88%
+} */
+
 .navigation {
-    width: 1123px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -172,8 +177,8 @@ header {
 }
 
 .hero-content {
-    width: 426px;
-    height: 404px;
+    width: 29.58%;
+    height: 77.1%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,8 +245,8 @@ header {
 }
 
 .about-content {
-    width: 1276px;
-    height: 528px;
+    width: 88.6%;
+    height: 81.48%;
     border-radius: 20px;
     background-color:  #FFFFFF;
     display: flex;
@@ -255,8 +260,8 @@ header {
 }
 
 .text-content {
-    width: 426px;
-    height: 328px;
+    width: 67%;
+    height: 62%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -299,6 +304,11 @@ h2.heading {
     margin: 0;
 }
 
+.about-img {
+    width: 50%;
+    height: 100%;
+}
+
 .about-img img{
     border-radius: 20px;
     width: 100%;
@@ -319,8 +329,8 @@ h2.heading {
 }
 
 .slider-content {
-    width: 1276px;
-    height: 368px;
+    width: 88.6%;
+    height: 75.4%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -328,8 +338,8 @@ h2.heading {
 }
 
 .section-header {
-    width: 426px;
-    height: 72px;
+    /* width: 33%; */
+    height: 19.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -342,12 +352,12 @@ h2.heading {
 }
 
 .slider-wrapper {
-    width: 1276px;
-    height: 200px;
+    width: 100%;
+    height: 54.34%;
 }
 
 .slider-row {
-    width: 1993px;
+    width: 156%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -409,8 +419,8 @@ h2.heading {
 }
 
 .best-gifts-content {
-    width: 1276px;
-    height: 434px;
+    width: 89%;
+    height: 78.3%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -419,7 +429,7 @@ h2.heading {
 
 .cards-container {
     width: 100%;
-    height: 342px;
+    /* height: 342px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,8 +506,8 @@ h4.for-harmony {
 }
 
 .cta-content {
-    width: 1276px;
-    height: 548px;
+    width: 88.6%;
+    height: 82%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,8 +515,8 @@ h4.for-harmony {
 }
 
 .cta-container {
-    width: 426px;
-    height: 428px;
+    width: 33.33%;
+    height: 78%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -531,7 +541,7 @@ h4.for-harmony {
 
 .countdown {
     width: 100%;
-    height: 104px;
+    /* height: 24%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -573,8 +583,8 @@ footer {
 }
 
 .footer-content {
-    width: 1276px;
-    height: 376px;
+    width: 100%;
+    height: 75.8%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -587,6 +597,8 @@ footer {
     height: 204px;
     display: flex;
     gap: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact {
@@ -610,7 +622,7 @@ footer {
 
 .authors {
     width: 100%;
-    height: 112px;
+    /* height: 30%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -618,7 +630,7 @@ footer {
 }
 
 .socials {
-    width: 196px;
+    /* width: 15.36%; */
     height: 40px;
     display: flex;
     align-items: center;
