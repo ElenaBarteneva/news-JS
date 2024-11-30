@@ -29,7 +29,6 @@ a, a:active {
     overflow: hidden;
     background-color: rgba(255, 70, 70, 1);
     border-radius: 20px;
-    margin-top: -1px;
 }
 
 header {
@@ -49,6 +48,7 @@ header {
 }
 
 .logo {
+    position: relative;
     width: 141px;
     /* height: 62.5%; */
     display: flex;
@@ -56,7 +56,7 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo img {
@@ -77,9 +77,12 @@ header {
     color: #181C29;
 }
 
-/* nav {
-    width: 88%
-} */
+.body_wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
 
 .navigation {
     width: 100%;
@@ -90,6 +93,7 @@ header {
     justify-content: flex-end;
     gap: 8px;
     padding: 0;
+    margin: 0;
 }
 
 .navigation li {
@@ -153,14 +157,18 @@ header {
 
 .navigation.open ~ .hamburger-menu .menu-button:before {
     transform: rotateZ(45deg);
-    left: 10px;
+    margin-top: 10px;
     top: 10px;
 }
 
 .navigation.open ~.hamburger-menu .menu-button:after {
     transform: rotateZ(135deg);
-    left: 10px;
+    margin-top: 10px;
     top: 10px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .hero {
@@ -338,7 +346,6 @@ h2.heading {
 }
 
 .section-header {
-    /* width: 33%; */
     height: 19.5%;
     display: flex;
     flex-direction: column;
@@ -356,12 +363,29 @@ h2.heading {
     height: 54.34%;
 }
 
+.move-left-desktop {
+    transform: translateX(664.33px);
+}
+
+.move-right-desktop {
+    transform: translateX(-664.33px);
+}
+
+.move-left-mobile {
+    transform: translateX(332.17px);
+}
+
+.move-right-mobile {
+    transform: translateX(-332.17px);
+}
+
 .slider-row {
-    width: 156%;
+    width: 1993px;
     height: 100%;
     display: flex;
     align-items: center;
     gap: 24px;
+    transition: transform 1s ease;
 }
 
 .slider-text {
@@ -464,6 +488,7 @@ h2.heading {
 
 .text-container p {
     letter-spacing: 0.09em;
+    text-transform:capitalize;
 }
 
 .text-container h4:nth-child(1) {
@@ -476,17 +501,18 @@ h2.heading {
     margin: 0;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    text-transform: capitalize;
 }
 
-h4.for-work {
+h4.for.work {
     color: #4361FF;
 }
 
-h4.for-health {
+h4.for.health {
     color: #06A44F;
 }
 
-h4.for-harmony {
+h4.for.harmony {
     color:  #FF43F7;
 }
 

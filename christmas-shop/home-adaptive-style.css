@@ -57,9 +57,9 @@
         justify-content: center;
         position: fixed;
         height: 100vh;
-        right: -106vw;
-        top: 51px;
-        bottom: 0;
+        right: -100vw;
+        top: 64px;
+        margin: 0 0 -32px 0;
         width: 100vw;
         background-color: #FFFF;
         z-index: 2;
@@ -204,9 +204,9 @@
         justify-content: center;
         position: fixed;
         height: 100vh;
-        right: -111vw;
-        top: 5.1rem;
-        bottom: 0;
+        right: -100vw;
+        top: 64px;
+        margin: 0 0 -32px 0;
         width: 100vw;
         background-color: #FFFF;
         z-index: 2;
@@ -215,7 +215,7 @@
     
     .navigation li a {
         display: block;
-        font-size: 2.4rem;
+        font-size: 24px;
         line-height: 152%;
         letter-spacing: 0.16em;
         text-align: left;
