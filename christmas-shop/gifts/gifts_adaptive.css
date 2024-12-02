@@ -16,19 +16,6 @@
 
 @media (min-width: 769px) and (max-width: 1279px) {
 
-    .gifts {
-        height: auto;
-        padding: 5%;
-    }
-
-    .gifts-content {
-        height: auto;
-    }
-
-    .cards-container {
-        height: auto;
-    }
-
     footer {
         height: 928px;
     }
@@ -49,47 +36,6 @@
 
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
-    .header-wrapper {
-        width: 75.2rem;
-    }
-        
-    .navigation {
-        max-width: 50rem;
-    }
-        
-    .gifts {
-        height: 245.6rem;
-    }
-        
-    .gifts-content {
-        width: 75.2rem;
-        height: 233.6rem;
-    }
-        
-    .cards-container {
-        height: 211.2rem;
-    }
-        
-    footer {
-        height: 92.8rem;
-    }
-        
-    .footer-content {
-        width: 75.2rem;
-        height: 80.8rem;
-    }
-        
-    .contacts {
-        height: 63.6rem;
-        flex-direction: column;
-    }
-        
-    .contact {
-        width: 100%;
-    }
-}
-
 @media(min-width: 711px) and (max-width: 768px) {
     .container {
         width: 98%;
@@ -106,14 +52,15 @@
         justify-content: center;
         position: fixed;
         height: 100vh;
-        right: -106vw;
-        top: 510px;
-        bottom: 0;
+        right: -100vw;
+        top: 64px;
+        margin: 0 0 -32px 0;
         width: 100vw;
         background-color: #FFFF;
         z-index: 2;
         transition: transform 0.5s ease;
     }
+
 
     .navigation li a,
     .navigation li.active-link {
@@ -134,26 +81,18 @@
         width: 100%;
     }
     
-    .gifts {
-        height: 2456px;
-    }
-
     .gifts-heading {
         width: 56.6%;
     }
     
     .gifts-content {
         width: 98%;
-        height: 2336px;
     }
 
     .tabs {
         width: 63%;
     }
-    
-    .cards-container {
-        height: 2112px;
-    }
+
     
     footer {
         height: 928px;
@@ -171,93 +110,26 @@
     .contact {
         width: 100%;
     }
-}
-/* 
-@media(min-width: 500px) and (max-width: 710px) {
-    .hamburger-menu {
-        display: block;
-    }
-    
-    .navigation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        height: 100vh;
-        right: -111vw;
-        top: 5.1rem;
-        bottom: 0;
-        width: 100vw;
-        background-color: #FFFF;
-        z-index: 2;
-        transition: transform 0.5s ease;
-        }
-    
-    .navigation li a,
-    .navigation li.active-link {
-        display: block;
-        font-size: 2.4rem;
-        line-height: 152%;
-        letter-spacing: 0.16em;
-        text-align: left;
-    }
-    
-    
-    .navigation.open {
-        transform: translateX(-100%);
-        visibility: visible;
-    }
-    
-    .header-wrapper {
-        width: 48rem;
-    }
-    
-    .gifts {
-        height: 455rem;
-    }
-    
-    .gifts-content {
-        width: 48rem;
-        height: 440rem;
-    }
-    
-    .cards-container {
-        height: 423.6rem;
-    }
-    
-    .gifts-heading {
-        width: 48rem;
-        height: 24rem;
-    }
-    
-    .tabs {
-        width: 35.4rem;
-    }
-    
-    .tab {
-        padding: 1.2rem 0.8rem;
-    }
-    
-    footer {
-        height: 92.8rem;
-    }
-    
-    .footer-content {
-        width: 48rem;
-        height: 80.8rem;
-    }
-    
-    .contacts {
-        height: 63.6rem;
-        flex-direction: column;
-     }
-    
-    .contact {
-        width: 100%;
-    }
-} */
 
+    .go-top {
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 100%;
+        border: solid #FF4646 1px;
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .go-top-show {
+        display: flex;
+    }
+}
 
 @media(min-width: 379px) and (max-width: 710px){
     .container {
@@ -275,9 +147,9 @@
         justify-content: center;
         position: fixed;
         height: 100vh;
-        right: -111vw;
-        top: 510px;
-        bottom: 0;
+        right: -100vw;
+        top: 64px;
+        margin: 0 0 -32px 0;
         width: 100vw;
         background-color: #FFFF;
         z-index: 2;
@@ -302,18 +174,10 @@
         width: 100%;
     }
     
-    .gifts {
-        height: 4676px;
-    }
-    
     .gifts-content {
         width: 95.8%;
-        height: 4556px;
     }
     
-    .cards-container {
-        height: 4236px;
-    }
 
     .gifts-heading {
         width: 95.8%;
@@ -344,5 +208,23 @@
     
     .contact {
         width: 100%;
+    }
+    .go-top {
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        border-radius: 100%;
+        border: solid #FF4646 1px;
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .go-top-show {
+        display: flex;
     }
 }
