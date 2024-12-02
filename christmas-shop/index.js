@@ -140,6 +140,7 @@ function generateCards() {
     for (let element of shuffledCards) {
         const card = document.createElement('div');
         card.classList.add('card');
+        card.id = element.id;
         const img = document.createElement("img");
         img.src = element.img;
         img.alt = element.name;
@@ -161,3 +162,115 @@ function generateCards() {
 }
 
 generateCards();
+
+//---------------------------------------------------------------
+// Modal --------------------------------------------------------
+const popupWrapper = document.querySelector('.popup-wrapper')
+const popupContent = document.querySelector('.popup-content')
+const closeButton = document.querySelector('.popup-close')
+
+function openPopup(event) {
+    const card = event.target.closest('.card');
+    const gift = Object.values(gifts).find(({ id }) => Number(id) === Number(card.id));
+    generatePopup(gift);
+    popupWrapper.classList.remove('hidden')
+    event.preventDefault();
+    body.classList.add('overflow-hidden');
+}
+
+function closePopup() {
+    popupWrapper.classList.add('hidden')
+    body.classList.remove('overflow-hidden');
+    popupContent.innerHTML = '';
+}
+
+
+closeButton.addEventListener('click', closePopup);
+
+popupWrapper.addEventListener('click', (event) => {
+    if (event.target.classList.contains('popup-wrapper')) {
+        closePopup();
+}
+});
+
+function generatePopup(gift) {
+    popupContent.innerHTML = '';
+    const superpowers = gift.superpowers;
+    popupContent.innerHTML = `
+    <div class="popup-img">
+                <img alt="${gift.name}" src="${gift.img}">
+            </div>
+            <div class="description">
+                <div class="popup-heading">
+                    <h4 class="for work">${gift.category.toUpperCase()}</h4>
+                    <p class="subheading">${gift.name.toUpperCase()}</p>
+                    <p class='gift-description'>${gift.description}</p>
+                </div>
+                <div class="superpowers">
+                    <h4 class="superpowers-header">Adds superpowers to:</h4>
+                    <div class="superpowers-container">
+                        <div class="superpowers-item">
+                            <p class="superpowers-item-name">Live</p>
+                            <p class="superpowers-item-rate">${gift.superpowers.live}</p>
+                            <div class="superpowers-item-stars"></div>
+                        </div>
+                        <div class="superpowers-item">
+                            <p class="superpowers-item-name">Create</p>
+                            <p class="superpowers-item-rate">${gift.superpowers.create}</p>
+                            <div class="superpowers-item-stars"></div>
+                        </div>
+                        <div class="superpowers-item">
+                            <p class="superpowers-item-name">Love</p>
+                            <p class="superpowers-item-rate">${gift.superpowers.love}</p>
+                            <div class="superpowers-item-stars"></div>
+                        </div>
+                        <div class="superpowers-item">
+                            <p class="superpowers-item-name">Dream</p>
+                            <p class="superpowers-item-rate">${gift.superpowers.dream}</p>
+                            <div class="superpowers-item-stars"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+
+    function putSuperPowersStars(category, container) {
+        const snowflakeImage = document.createElement('img');
+        snowflakeImage.alt = 'snowflake icon';
+        snowflakeImage.src = './assets/images/snowflake.png';
+        let categoryRate;
+
+
+        if (category === 'live') {
+            categoryRate = Number(superpowers.live.replace('+', '')) / 100;
+        } else if (category === 'create') {
+            categoryRate = Number(superpowers.create.replace('+', '')) / 100;
+        } else if (category === 'love') {
+            categoryRate = Number(superpowers.love.replace('+', '')) / 100;
+        } else if (category === 'dream') {
+            categoryRate = Number(superpowers.dream.replace('+', '')) / 100;
+        }
+
+        for (let i = 0; i < categoryRate; i++ ) {
+            const clonedImage = snowflakeImage.cloneNode();
+            container.appendChild(clonedImage);
+        } 
+    }
+
+    const liveStarsContainer = document.querySelector('.superpowers-container .superpowers-item:nth-child(1) .superpowers-item-stars');
+    putSuperPowersStars('live', liveStarsContainer);
+    const createStarsContainer = document.querySelector('.superpowers-container .superpowers-item:nth-child(2) .superpowers-item-stars');
+    putSuperPowersStars('create', createStarsContainer);
+    const loveStarsContainer = document.querySelector('.superpowers-container .superpowers-item:nth-child(3) .superpowers-item-stars');
+    putSuperPowersStars('love', loveStarsContainer);
+    const dreamStarsContainer = document.querySelector('.superpowers-container .superpowers-item:nth-child(4) .superpowers-item-stars');
+    putSuperPowersStars('dream', dreamStarsContainer);
+
+}
+
+if (cardsContainer) {
+    cardsContainer.addEventListener('click', (event) => {
+        if (event.target.closest('.card')) {
+            openPopup(event);
+        }
+    })
+}
