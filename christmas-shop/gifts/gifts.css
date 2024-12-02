@@ -469,6 +469,10 @@ header {
     text-decoration-skip-ink: none;
 }
 
+.for {
+    margin: 0;
+}
+
 h4.for-work {
     color: #4361FF;
 }

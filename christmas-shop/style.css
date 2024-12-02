@@ -896,6 +896,7 @@ footer {
     .arrow:hover {
         border: 1px solid #FFFFFF;
         background-color: #FFFFFF;
+        cursor: pointer;
     }
     
     .arrow:hover svg path {
