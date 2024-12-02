@@ -344,7 +344,7 @@ header {
 .gifts {
     width: 100%;
     height: auto;
-    padding: 60px 8px;
+    padding: 60px 0;
     background-image: url('../assets/images/gyrland.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -361,7 +361,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 20px;
 }
 
 .gifts-heading {
@@ -487,10 +487,11 @@ h4.for-harmony {
 
 footer {
     width: 100%;
-    height: 496px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 60px 0;
 }
 
 .heading {
@@ -521,20 +522,20 @@ footer {
 }
 
 .footer-content {
-    width: 127.6rem;
-    height: 37.6rem;
+    width: 1276px;
+    height: 376px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 60px;
 }
 
 .contacts {
     width: 100%;
-    height: 20.4rem;
+    height: 204px;
     display: flex;
-    gap: 1.2rem;
+    gap: 12px;
 }
 
 .contact {
@@ -549,34 +550,35 @@ footer {
     background-color: #ECF3F8;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    padding: 20px;
 }
 
 .contact img {
-    width: 8rem;
-    height: 8rem;
+    width: 80px;
+    height: 80px;
 }
 
 .authors {
     width: 100%;
-    height: 11.2rem;
+    height: 112px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 12px;
 }
 
 .socials {
-    width: 19.6rem;
-    height: 4rem;
+    width: 196px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 1.2rem;
+    gap: 12px;
 }
 
 .social {
-    width: 4rem;
-    height: 4rem;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -592,9 +594,10 @@ footer {
 .contact .subheading {
     letter-spacing: 0.09em;
 }
+
 .footer-content {
     width: 100%;
-    height: 75.8%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -604,7 +607,7 @@ footer {
 
 .contacts {
     width: 100%;
-    height: 204px;
+    height: auto;
     display: flex;
     gap: 12px;
     justify-content: center;
@@ -669,6 +672,7 @@ footer {
 
 .contact .heading {
     letter-spacing: 0.18em;
+    font-size: 24px;
 }
 
 @font-face {
