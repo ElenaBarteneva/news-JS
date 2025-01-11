@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1f1f36;
+}
+
+.title {
+    font-weight: 700;
+    font-style: italic;
+    color:aquamarine;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: background-color 0.2s;
+}
+
+.key.highlight {
+    background-color: #4caf50;
+    color: white;
+}
+
+.key.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.input-sequence {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+.disabled-btn {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.disabled-key {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+.instructions {
+    font-size: 14px;
+    margin-top: 20px;
+}
