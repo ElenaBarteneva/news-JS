@@ -20,21 +20,22 @@ const difficultySelector = document.createElement('select');
 const startBtn = document.createElement('button');
 const virtualKeyboard = document.createElement('div');
 const gameScreen = document.createElement('div');
-const difficultyLabel = document.createElement('span');
-const roundCount = document.createElement('span');
+const difficultyLabel = document.createElement('p');
+const roundCount = document.createElement('p');
 const userInputField = document.createElement('div');
 const repeatBtn = document.createElement('button');
 const nextBtn = document.createElement('button');
 const newGameBtn = document.createElement('button');
 const feedbackMessage = document.createElement('div');
-// const instructions = document.createElement('div');
 
 function createElements() {
     container.classList.add('container');
     document.body.appendChild(container);
+
     title.classList.add("title")
     title.innerHTML = "Simon Says"
     container.appendChild(title);
+
     initialScreen.id = 'initial-screen';
     initialScreen.classList.add('initial-screen');
     difficultySelector.id = 'difficulty';
@@ -52,8 +53,11 @@ function createElements() {
     createVirtualKeyboard();
     initialScreen.appendChild(difficultySelector);
     initialScreen.appendChild(startBtn);
+    initialScreen.appendChild(difficultyLabel);
+    initialScreen.appendChild(roundCount);
     initialScreen.appendChild(virtualKeyboard);
     container.appendChild(initialScreen);
+
     gameScreen.id = 'game-screen';
     gameScreen.classList.add('game-screen');
     gameScreen.classList.add('hidden');
@@ -73,16 +77,12 @@ function createElements() {
     newGameBtn.textContent = 'New Game';
     feedbackMessage.id = 'feedback-message';
     feedbackMessage.classList.add('feedback');
-    // instructions.classList.add('instructions');
     container.appendChild(gameScreen);
-    initialScreen.appendChild(difficultyLabel);
-    gameScreen.appendChild(roundCount);
     gameScreen.appendChild(userInputField);
     gameScreen.appendChild(repeatBtn);
     gameScreen.appendChild(nextBtn);
     gameScreen.appendChild(newGameBtn);
     gameScreen.appendChild(feedbackMessage);
-    // gameScreen.appendChild(instructions);
 }
 
 createElements();
@@ -123,32 +123,29 @@ function handleKeyClick(symbol) {
     } else if (sequence[userInput.length - 1] !== symbol) {
         feedback(false);
     }
-
-    console.log(incorrectAttempts);
-    console.log(gameInProgress);
 }
 
 function highlightKey(symbol) {
     const key = Array.from(virtualKeyboard.getElementsByClassName('key')).find(key => key.innerText === symbol);
     if (key) {
         key.classList.add('highlight');
-        setTimeout(() => key.classList.remove('highlight'), 300);
+        setTimeout(() => key.classList.remove('highlight'), 400);
     }
 }
 
 function feedback(correct) {
     if (correct) {
-        // repeatBtn.classList.add('disabled-btn');
-        // repeatBtn.disabled = true;
         repeatBtn.classList.add('hidden');
         nextBtn.classList.remove('hidden');
         feedbackMessage.textContent = 'Correct! Move to the next round.';
+        feedbackMessage.style.color = 'white';
     } else {
         incorrectAttempts += 1;
         if (incorrectAttempts === 1) {
             userInput = userInput.slice(0, -1);
             userInputField.textContent = userInput;
             feedbackMessage.textContent = 'Incorrect! You have one more attempt.';
+            feedbackMessage.style.color = 'white';
         }
         if (incorrectAttempts === 2) {
             gameInProgress = false;
@@ -156,7 +153,6 @@ function feedback(correct) {
             userInputField.textContent = userInput;
             feedbackMessage.textContent = 'Game Over';
             feedbackMessage.style.color = 'red';
-            // instructions.textContent = '';
             repeatBtn.classList.add('disabled-btn');
             repeatBtn.disabled = true;
         }
@@ -187,6 +183,7 @@ function startGame() {
 function startRound() {
     sequence = generateSequence(round);
     displaySequence(sequence);
+    roundCount.classList.remove('hidden');
     roundCount.textContent = `Round: ${round}`;
     userInput = '';
     userInputField.textContent = '';
@@ -198,16 +195,8 @@ function startRound() {
     repeatBtn.disabled = false;
     repeatBtn.textContent = 'Repeat the sequence';
     nextBtn.classList.add('hidden');
-    // instructions.textContent = 'Please wait while the sequence is shown...';
     gameInProgress = false;
-    //         // Disable repeat and new game buttons during sequence typing simulation
-    // repeatBtn.classList.add('disabled-btn');
-    // repeatBtn.disabled = true;
-    // newGameBtn.classList.add('disabled-btn');
-    // newGameBtn.disabled = true;
 }
-
-// Обработать вторую попытку и гейм овер. если одна неверная попытка - последний символ убираем.
 
 function generateSequence(round) {
     const symbols = keySets[difficulty];
@@ -241,7 +230,6 @@ function displaySequence(seq) {
         } else {
             clearInterval(interval);
             gameInProgress = true;
-            // instructions.textContent = 'Now, repeat the sequence by clicking or pressing keys.';
             if (allowSecondAttempt) {
                 repeatBtn.classList.remove('disabled-btn');
                 repeatBtn.disabled = false;
@@ -256,7 +244,7 @@ function highlightKey(symbol) {
     const key = Array.from(virtualKeyboard.getElementsByClassName('key')).find(key => key.innerText === symbol);
     if (key) {
         key.classList.add('highlight');
-        setTimeout(() => key.classList.remove('highlight'), 300);
+        setTimeout(() => key.classList.remove('highlight'), 400);
     }
 }
 
@@ -264,10 +252,11 @@ function repeatSequence() {
     if (incorrectAttempts > 2 && !allowSecondAttempt) return;
     userInput = '';
     userInputField.textContent = '';
+    feedbackMessage.textContent = '';
     displaySequence(sequence);
     repeatBtn.classList.add('disabled-btn');
     repeatBtn.disabled = true;
-    allowSecondAttempt = false; // Disable further attempts after second try
+    allowSecondAttempt = false;
 }
 
 function nextRound() {
@@ -288,9 +277,10 @@ function startNewGame() {
     startBtn.classList.remove('hidden');
     gameScreen.classList.add('hidden');
     difficultyLabel.classList.add('hidden');
+    roundCount.classList.add('hidden');
     feedbackMessage.textContent = '';
     difficultySelector.value = 'easy';
-    // difficultySelector.addEventListener('change', changeDifficulty);
+    difficulty = 'easy';
     createVirtualKeyboard();
 }
 
@@ -299,19 +289,6 @@ function changeDifficulty() {
     difficulty = difficultySelector.value;
     createVirtualKeyboard();
 }
-
-// function gameOver() {
-//     if (incorrectAttempts >= 2) {
-//         gameInProgress = false;
-//         feedbackMessage.textContent = 'Game Over';
-//         instructions.textContent = '';
-//         repeatBtn.classList.add('disabled-btn');
-//         repeatBtn.disabled = true;
-//     }
-// }
-
-// gameOver();
-
 
 
 
