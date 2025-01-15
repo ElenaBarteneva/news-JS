@@ -137,8 +137,15 @@ function feedback(correct) {
     if (correct) {
         repeatBtn.classList.add('hidden');
         nextBtn.classList.remove('hidden');
-        feedbackMessage.textContent = 'Correct! Move to the next round.';
-        feedbackMessage.style.color = 'white';
+        if (round === 5) {
+            feedbackMessage.textContent = 'Congrats! You won!';
+            feedbackMessage.style.color = 'green';
+        }
+        else {
+            feedbackMessage.textContent = 'Correct! Move to the next round.';
+            feedbackMessage.style.color = 'white';
+         }
+        
     } else {
         incorrectAttempts += 1;
         if (incorrectAttempts === 1) {
@@ -195,6 +202,8 @@ function startRound() {
     repeatBtn.disabled = false;
     repeatBtn.textContent = 'Repeat the sequence';
     nextBtn.classList.add('hidden');
+    nextBtn.classList.remove('disabled-btn');
+    nextBtn.disabled = false;
     gameInProgress = false;
 }
 
@@ -265,6 +274,8 @@ function nextRound() {
         startRound();
     } else {
         feedbackMessage.textContent = 'Congratulations, you completed all rounds!';
+        nextBtn.classList.add('disabled-btn');
+        nextBtn.disabled = true;
         repeatBtn.classList.add('disabled-btn');
         repeatBtn.disabled = true;
     }
@@ -279,8 +290,8 @@ function startNewGame() {
     difficultyLabel.classList.add('hidden');
     roundCount.classList.add('hidden');
     feedbackMessage.textContent = '';
-    difficultySelector.value = 'easy';
-    difficulty = 'easy';
+    // difficultySelector.value = 'easy';
+    // difficulty = 'easy';
     createVirtualKeyboard();
 }
 
