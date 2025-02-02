@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+    background-color: grey;
+}
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    height: 100%;
+    background-color: white;
+    user-select: none;
+    font-family: monospace;
+}
+
+.header {
+    padding: 10px;
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    width: 25px;
+}
+
+h1 {
+    margin: 0;
+    line-height: 30px;
+}
+
+.controls {
+    flex: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding: 10px 5px 0 5px;
+}
+
+.level {
+    flex: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.template {
+    flex: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.timer {
+    flex: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.game-field {
+    flex: 72%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.difficulty-level {
+    max-height: 30px;
+    max-width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.template-field {
+    max-height: 30px;
+    max-width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.save,
+.load,
+.reset,
+.random,
+.show-solution,
+.result-list,
+.themes {
+    background-color: #fff;
+    font-family: monospace;
+    border-radius: 5px;
+    white-space: pre-line;
+    cursor: pointer;
+}
+
+.themes img {
+    width: 25px;
+}
+
+button:active {
+    background-color: rgb(100, 100, 100);
+}
+
+.active {
+    background-color: rgb(100, 100, 100);
+}
+
