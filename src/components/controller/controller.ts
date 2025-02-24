@@ -1,8 +1,8 @@
 import AppLoader from './appLoader';
-import { TCallback } from '../additional'
+import { INewsData, ISourcesData, TCallback } from '../additional'
 
 class AppController extends AppLoader {
-    public getSources(callback: TCallback): void {
+    public getSources(callback: TCallback<ISourcesData>): void {
         super.getResp(
             {
                 endpoint: 'sources',
@@ -11,7 +11,7 @@ class AppController extends AppLoader {
         );
     }
 
-    public getNews(e: Event, callback: TCallback) {
+    public getNews(e: Event, callback: TCallback<INewsData>) {
         let target = e.target as HTMLElement;
         const newsContainer = e.currentTarget as HTMLElement;
 

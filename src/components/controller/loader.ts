@@ -12,9 +12,9 @@ class Loader {
         this.options = options;
     }
 
-    public getResp(
+    public getResp<T>(
         { endpoint, options = {} }: {endpoint: string, options?: IOptions},
-        callback: TCallback = (): void => {
+        callback: TCallback<T> = (): void => {
             console.error('No callback for GET response');
         }
     ): void {
@@ -42,7 +42,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    protected load(method: TMethod, endpoint: string, callback: TCallback, options: IOptions = {}): void {
+    protected load<T>(method: TMethod, endpoint: string, callback: TCallback<T>, options: IOptions = {}): void {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

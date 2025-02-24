@@ -49,7 +49,8 @@ interface ISourcesData {
 
 type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE
 
-type TCallback = (data: INewsData | ISourcesData) => void;
+// type TCallback = (data: INewsData | ISourcesData) => void;
+type TCallback<T> = (data: T) => void;
 
 
 export {IOptions, ResponseStatus, Methods, TCallback, TMethod, ISourcesData, INews, ISources, INewsData}
