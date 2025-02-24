@@ -1,5 +1,6 @@
 interface IOptions {
     apiKey?: string;
+    sources?: string;
 }
 
 enum ResponseStatus {
@@ -43,7 +44,7 @@ interface INewsData {
 }
 
 interface ISourcesData {
-    articles?: ReadonlyArray<ISources<string[]>>;
+    articles?: ReadonlyArray<ISources<string>[]>;
 }
 
 type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE
@@ -51,4 +52,4 @@ type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE
 type TCallback = (data: INewsData | ISourcesData) => void;
 
 
-export {IOptions, ResponseStatus, Methods, TCallback, TMethod}
+export {IOptions, ResponseStatus, Methods, TCallback, TMethod, ISourcesData}
