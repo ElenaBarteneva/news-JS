@@ -5,14 +5,14 @@ interface IOptions {
 
 enum ResponseStatus {
     Unauthorized = 401,
-    NotFound  = 404
+    NotFound = 404,
 }
 
 enum Methods {
     GET = 'GET',
     POST = 'POST',
     PUT = 'PUT',
-    DELETE = 'DELETE'
+    DELETE = 'DELETE',
 }
 
 interface INews<T> {
@@ -47,10 +47,7 @@ interface ISourcesData {
     sources?: ReadonlyArray<ISources<string>>;
 }
 
-type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE
-
-// type TCallback = (data: INewsData | ISourcesData) => void;
+type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE;
 type TCallback<T> = (data: T) => void;
 
-
-export {IOptions, ResponseStatus, Methods, TCallback, TMethod, ISourcesData, INews, ISources, INewsData}
+export { IOptions, ResponseStatus, Methods, TCallback, TMethod, ISourcesData, INews, ISources, INewsData };

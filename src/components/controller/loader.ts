@@ -1,11 +1,8 @@
-import { IOptions, ResponseStatus, Methods, TMethod, TCallback } from '../additional'
+import { IOptions, ResponseStatus, Methods, TMethod, TCallback } from '../additional';
 
 class Loader {
-
     private baseLink: string;
-    private options:  IOptions;
-
-
+    private options: IOptions;
 
     constructor(baseLink: string, options: IOptions) {
         this.baseLink = baseLink;
@@ -13,7 +10,7 @@ class Loader {
     }
 
     public getResp<T>(
-        { endpoint, options = {} }: {endpoint: string, options?: IOptions},
+        { endpoint, options = {} }: { endpoint: string; options?: IOptions },
         callback: TCallback<T> = (): void => {
             console.error('No callback for GET response');
         }

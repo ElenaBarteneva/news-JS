@@ -1,5 +1,5 @@
 import './sources.css';
-import { ISources } from '../../additional'
+import { ISources } from '../../additional';
 
 class Sources {
     public draw(data: ReadonlyArray<ISources<string>>) {

@@ -1,5 +1,5 @@
 import AppLoader from './appLoader';
-import { INewsData, ISourcesData, TCallback } from '../additional'
+import { INewsData, ISourcesData, TCallback } from '../additional';
 
 class AppController extends AppLoader {
     public getSources(callback: TCallback<ISourcesData>): void {

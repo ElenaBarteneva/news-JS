@@ -1,5 +1,5 @@
 import './news.css';
-import { INews } from '../../additional'
+import { INews } from '../../additional';
 
 class News {
     public draw(data: ReadonlyArray<INews<string>>) {
@@ -16,7 +16,8 @@ class News {
             (newsClone.querySelector('.news__meta-photo') as HTMLElement).style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
             })`;
-            (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent = item.author || item.source.name;
+            (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent =
+                item.author || item.source.name;
             (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
                 .slice(0, 10)
                 .split('-')
