@@ -40,11 +40,11 @@ interface ISources<T> {
 }
 
 interface INewsData {
-    articles?: ReadonlyArray<INews<string>[]>;
+    articles?: ReadonlyArray<INews<string>>;
 }
 
 interface ISourcesData {
-    articles?: ReadonlyArray<ISources<string>[]>;
+    sources?: ReadonlyArray<ISources<string>>;
 }
 
 type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE
@@ -52,4 +52,4 @@ type TMethod = Methods.GET | Methods.POST | Methods.PUT | Methods.DELETE
 type TCallback = (data: INewsData | ISourcesData) => void;
 
 
-export {IOptions, ResponseStatus, Methods, TCallback, TMethod, ISourcesData}
+export {IOptions, ResponseStatus, Methods, TCallback, TMethod, ISourcesData, INews, ISources, INewsData}
